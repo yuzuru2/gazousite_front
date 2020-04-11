@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+/* bootstrapの謎の右の余白を消す */
+#wrap {
+  overflow: hidden;
+  background: #eee;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  max-width: 30%;
+}
+
+main {
+  max-width: 750px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 767px) {
+  main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  header img {
+    max-width: 60%;
+  }
+}
