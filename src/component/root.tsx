@@ -1,4 +1,11 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+
+// マテリアルUI
+import Button from '@material-ui/core/Button';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
 
 import { loading } from 'src/component/loading';
 import { constant } from 'src/constant';
@@ -108,11 +115,16 @@ export const root = () => {
   return (
     <>
       <div id="wrap">
-        <br />
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">
+              <Link to="/" style={{ color: '#fff' }}>
+                {constant.TITLE}
+              </Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
 
-        <header>
-          <img src="/img/header.png" />
-        </header>
         <br />
 
         <main id="input_area">
@@ -120,12 +132,15 @@ export const root = () => {
           <br />
 
           <div className="text-center">
-            <input
-              type="file"
-              id="file_upload"
-              accept="image/*"
-              onChange={(e) => create(e.target.files, set_display)}
-            />
+            <Button component="label" variant="contained" color="primary">
+              アップロード
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => create(e.target.files, set_display)}
+                className="inputFileBtnHide"
+              />
+            </Button>
           </div>
         </main>
       </div>
