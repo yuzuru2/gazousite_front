@@ -33,3 +33,10 @@ main {
     max-width: 60%;
   }
 }
+
+/* マテリアルUI file */
+.inputFileBtnHide {
+  opacity: 0;
+  appearance: none;
+  position: absolute;
+}
