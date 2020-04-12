@@ -4,6 +4,7 @@
     "build": "parcel build ./src/index.html --public-url ./ -d dist --no-source-maps && cp -r src/img dist/"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.10",
     "bootstrap": "^4.4.1",
     "connected-react-router": "^6.7.0",
     "copy-to-clipboard": "^3.3.1",
