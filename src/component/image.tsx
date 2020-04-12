@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 const QRCode = require('qrcode');
 const copy = require('copy-to-clipboard');
 
+// マテリアルUI
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
+
 import { loading } from 'src/component/loading';
 import { constant } from 'src/constant';
 import { history } from 'src';
@@ -66,6 +71,16 @@ export const image = () => {
   return (
     <>
       <div id="wrap">
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">
+              <Link to="/" style={{ color: '#fff' }}>
+                {constant.TITLE}
+              </Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+
         <br />
 
         <main id="input_area">
